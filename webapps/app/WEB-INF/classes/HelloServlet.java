@@ -2,26 +2,35 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import org.json.*;
 
 @WebServlet("/sayhello")
 public class HelloServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        response.setContentType("text/html");
+        response.setContentType("application/json");
+        response.setCharacterEncoding("utf-8");
         PrintWriter out = response.getWriter();
 
-        out.println("<html>");
-        out.println("<head><title>Hello, World</title></head>");
-        out.println("<body>");
-        out.println("<h1>Hello, world!</h1>");  // says Hello
+        //create Json Object
+        JSONObject json = new JSONObject();
+
+        // put some value pairs into the JSON object .
+        json.put("title", "Hello, World");
+        json.put("body", "Hello, world!");
+
         // Echo client's request information
-        out.println("<p>Request URI: " + request.getRequestURI() + "</p>");
-        out.println("<p>Protocol: " + request.getProtocol() + "</p>");
-        out.println("<p>PathInfo: " + request.getPathInfo() + "</p>");
-        out.println("<p>Remote Address: " + request.getRemoteAddr() + "</p>");
+        json.put("requestURI", request.getRequestURI());
+        json.put("protocol", request.getProtocol());
+        json.put("pathInfo", request.getPathInfo());
+        json.put("remoteAddress", request.getRemoteAddr());
+
         // Generate a random number upon each request
-        out.println("<p>A Random Number: <strong>" + Math.random() + "</strong></p>");
-        out.println("</body></html>");
+        json.put("randomNumber", Math.random());
+
+        // finally output the json string
+        out.print(json.toString());
+
         out.close();  // Always close the output writer
     }
 }
