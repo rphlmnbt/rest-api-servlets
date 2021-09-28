@@ -35,13 +35,12 @@ public class QueryServlet extends HttpServlet {
             // Step 4: Process the query result set
             int count = 0;
             while(rset.next()) {
-                // Print a paragraph <p>...</p> for each record
+                // Create JSON Object
                 JSONObject jsonRes = new JSONObject();
 
                 jsonRes.put("author", rset.getString("author"));
                 jsonRes.put("title", rset.getString("title"));
                 jsonRes.put("price", rset.getDouble("price"));
-                jsonRes.put("remoteAddress", request.getRemoteAddr());
                 jsonArray.put(jsonRes);
                 count++;
 
