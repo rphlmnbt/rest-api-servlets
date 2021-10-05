@@ -175,3 +175,5 @@
 0:0:0:0:0:0:0:1 - - [28/Sep/2021:22:26:17 +0800] "GET /app/query?author=Tan%20Ah%20Teck HTTP/1.1" 200 138
 0:0:0:0:0:0:0:1 - - [28/Sep/2021:22:27:11 +0800] "GET /app/query?author=Tan%20Ah%20Teck HTTP/1.1" 200 138
 0:0:0:0:0:0:0:1 - - [28/Sep/2021:22:27:58 +0800] "GET /app/query?author=Tan%20Ah%20Teck HTTP/1.1" 200 138
+0:0:0:0:0:0:0:1 - - [28/Sep/2021:22:34:27 +0800] "GET /app/query HTTP/1.1" 200 2
+0:0:0:0:0:0:0:1 - - [28/Sep/2021:22:34:32 +0800] "GET /app/query?author=Tan%20Ah%20Teck HTTP/1.1" 200 138

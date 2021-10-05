@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [04/Oct/2021:21:50:44 +0800] "GET /app/ HTTP/1.1" 200 1422
+0:0:0:0:0:0:0:1 - - [04/Oct/2021:21:50:46 +0800] "GET /app/register.html HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [04/Oct/2021:21:50:48 +0800] "GET /app/home.html HTTP/1.1" 200 439
+0:0:0:0:0:0:0:1 - - [04/Oct/2021:21:51:48 +0800] "GET /app/query?author=Tan%20Ah%20Teck HTTP/1.1" 200 138
+0:0:0:0:0:0:0:1 - - [04/Oct/2021:21:53:47 +0800] "GET /app/query?author=Tan%20Ah%20Teck HTTP/1.1" 200 138
+0:0:0:0:0:0:0:1 - - [04/Oct/2021:21:54:43 +0800] "GET /app/query?author=Mohammad%20Ali HTTP/1.1" 200 78
+0:0:0:0:0:0:0:1 - - [04/Oct/2021:21:55:18 +0800] "GET /app/query?author=Kumar HTTP/1.1" 200 58
