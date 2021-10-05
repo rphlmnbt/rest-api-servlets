@@ -7,9 +7,15 @@ API Documentation
 Base URL for API = http://localhost:8080/app
 
 Say Hello (GET Request) - Outputs "Hello World" message in JSON format.
+
 /sayhello
 
-Query Book (GET Request) - Outputs books by the author in the parameter
+Query Book (GET Request) - Outputs books by the author in the parameter.
+
+HTML Response:
 /query?author={{author}}
+
+JSON Response:
+/jsonquery?author={{author}}
 
 
